@@ -2,34 +2,261 @@
 <html>
 <head>
 <title>AgoraSentinel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
+
 body{
-font-family:Arial;
-background:#0c1a2b;
+margin:0;
+font-family:'Inter',sans-serif;
+background:#0F1C2E;
 color:white;
+}
+
+nav{
+background:#0B1626;
+padding:18px 40px;
+font-family:'Space Grotesk',sans-serif;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:15px;
+}
+
+.hero{
+padding:100px 20px;
 text-align:center;
-padding:60px;
 }
-h1{
-font-size:48px;
+
+.hero h1{
+font-family:'Space Grotesk',sans-serif;
+font-size:46px;
+margin-bottom:20px;
 }
-p{
+
+.hero p{
 font-size:20px;
-color:#9db3c8;
+color:#b6c2d1;
 }
+
+.buttons{
+margin-top:30px;
+}
+
+button{
+background:#2F6FED;
+border:none;
+padding:14px 24px;
+margin:10px;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.section{
+padding:60px 40px;
+}
+
+.section h2{
+font-family:'Space Grotesk',sans-serif;
+font-size:28px;
+margin-bottom:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #2b3b52;
+text-align:left;
+}
+
+.partySplit{
+font-weight:bold;
+}
+
+.live{
+color:#C9A227;
+font-weight:bold;
+margin-bottom:20px;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>AgoraSentinel</h1>
+<nav>
 
-<p>Watching the Public Square</p>
+<div class="logo">👁 AgoraSentinel</div>
 
-<p>Tracking every vote in Congress.</p>
+<div>
+<a href="#">Latest Votes</a>
+<a href="#">Your Representatives</a>
+<a href="#">Bills</a>
+<a href="#">About</a>
+</div>
 
-<p>Platform launching soon.</p>
+</nav>
+
+<div class="hero">
+
+<h1>Watch the Public Square</h1>
+
+<p>
+Every vote in Congress — transparent and trackable.<br>
+See how your representatives actually vote.
+</p>
+
+<div class="buttons">
+
+<button>View Latest Votes</button>
+<button>Find Your Representatives</button>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="live">● LIVE — Congressional Activity</div>
+
+<h2>🔥 Most Divisive Votes Today</h2>
+
+<table>
+
+<tr>
+<th>Bill</th>
+<th>Chamber</th>
+<th>Result</th>
+<th>Party Split</th>
+</tr>
+
+<tr>
+<td>H.R. 8123 — Infrastructure Expansion Act</td>
+<td>House</td>
+<td>Passed</td>
+<td class="partySplit">96%</td>
+</tr>
+
+<tr>
+<td>S. 3421 — Border Security Funding</td>
+<td>Senate</td>
+<td>Failed</td>
+<td class="partySplit">91%</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Latest Congressional Votes</h2>
+
+<table>
+
+<tr>
+<th>Date</th>
+<th>Chamber</th>
+<th>Bill</th>
+<th>Result</th>
+<th>Yes</th>
+<th>No</th>
+<th>Party Split</th>
+</tr>
+
+<tr>
+<td>Mar 9</td>
+<td>House</td>
+<td>H.R. 8123</td>
+<td>Passed</td>
+<td>221</td>
+<td>209</td>
+<td>96%</td>
+</tr>
+
+<tr>
+<td>Mar 9</td>
+<td>Senate</td>
+<td>S. 3421</td>
+<td>Failed</td>
+<td>48</td>
+<td>52</td>
+<td>91%</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Congressional Behavior Insights</h2>
+
+<table>
+
+<tr>
+<th>Category</th>
+<th>Member</th>
+<th>Party</th>
+<th>State</th>
+<th>Score</th>
+</tr>
+
+<tr>
+<td>Most Independent</td>
+<td>Sen. Lisa Murkowski</td>
+<td>R</td>
+<td>AK</td>
+<td>14%</td>
+</tr>
+
+<tr>
+<td>Most Loyal</td>
+<td>Rep. Example</td>
+<td>R</td>
+<td>TX</td>
+<td>99%</td>
+</tr>
+
+<tr>
+<td>Missed Votes</td>
+<td>Rep. Example</td>
+<td>D</td>
+<td>CA</td>
+<td>8%</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Transparency Roadmap</h2>
+
+<p>
+Coming Soon: Federal Spending Tracker • Executive Action Monitor • Lobbying Influence Map • Regulatory Tracker
+</p>
+
+</div>
 
 </body>
-
 </html>
