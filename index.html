@@ -14,6 +14,12 @@ background:#0F1C2E;
 color:white;
 }
 
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+
 nav{
 background:#0B1626;
 padding:18px 20px;
@@ -21,8 +27,6 @@ font-family:'Space Grotesk',sans-serif;
 display:flex;
 justify-content:space-between;
 align-items:center;
-max-width:1100px;
-margin:auto;
 }
 
 .logo{
@@ -69,9 +73,7 @@ cursor:pointer;
 }
 
 .section{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
+padding:60px 0;
 }
 
 .section h2{
@@ -95,86 +97,80 @@ text-align:left;
 font-weight:bold;
 }
 
-.zipLookup{
-  text-align:center;
-  margin-top:30px;
-}
-
-.zipLookup input{
-  padding:12px;
-  font-size:16px;
-  border-radius:6px;
-  border:none;
-  width:160px;
-  margin-right:10px;
-}
-
-.zipLookup button{
-  padding:12px 18px;
-  font-size:16px;
-  border-radius:6px;
-  border:none;
-  background:#2F6FED;
-  color:white;
-  cursor:pointer;
-}
-
-.results{
-  margin-top:30px;
-  text-align:center;
-  font-size:18px;
-}
 .live{
 color:#C9A227;
 font-weight:bold;
 margin-bottom:20px;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-}
 .liveFeed{
-  background:#0B1626;
-  border:1px solid #1f2b3d;
-  border-radius:8px;
-  padding:20px;
-  margin:60px 0 40px 0;
-}
-.liveFeed{
-  background:#0B1626;
-  border:1px solid #1f2b3d;
-  border-radius:8px;
-  padding:20px;
-  margin-bottom:40px;
+background:#0B1626;
+border:1px solid #1f2b3d;
+border-radius:8px;
+padding:20px;
+margin:60px 0 40px 0;
 }
 
 .liveFeed h3{
-  margin-top:0;
-  font-family:'Space Grotesk', sans-serif;
+margin-top:0;
+font-family:'Space Grotesk',sans-serif;
 }
 
 .activity{
-  display:flex;
-  justify-content:space-between;
-  padding:10px 0;
-  border-bottom:1px solid #1f2b3d;
-  font-size:14px;
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #1f2b3d;
+font-size:14px;
 }
 
 .activity:last-child{
-  border-bottom:none;
+border-bottom:none;
 }
 
 .activity span{
-  color:#8fa3bf;
+color:#8fa3bf;
 }
+
+/* ZIP LOOKUP */
+
+.zipLookup{
+text-align:center;
+margin-top:40px;
+}
+
+.zipLookup input{
+padding:12px;
+font-size:16px;
+border-radius:6px;
+border:none;
+width:160px;
+margin-right:10px;
+}
+
+.zipLookup button{
+padding:12px 18px;
+font-size:16px;
+border-radius:6px;
+border:none;
+background:#2F6FED;
+color:white;
+cursor:pointer;
+}
+
+.results{
+margin-top:30px;
+text-align:center;
+font-size:18px;
+}
+
 </style>
 </head>
 
 <body>
+
 <div class="container">
+
 <nav>
 
 <div class="logo">👁 AgoraSentinel</div>
@@ -204,9 +200,22 @@ See how your representatives actually vote.
 
 </div>
 
+<div class="zipLookup">
+
+<h3>Find Your Representatives</h3>
+
+<input id="zipInput" placeholder="Enter ZIP Code">
+
+<button onclick="lookupZip()">Search</button>
+
+</div>
+
+<div id="results" class="results"></div>
+
 </div>
 
 <div class="section">
+
 <div class="liveFeed">
 
 <h3>⚡ Live Congressional Activity</h3>
@@ -232,6 +241,7 @@ See how your representatives actually vote.
 </div>
 
 </div>
+
 <div class="live">● LIVE — Congressional Activity</div>
 
 <h2>🔥 Most Divisive Votes Today</h2>
@@ -346,7 +356,6 @@ See how your representatives actually vote.
 </div>
 
 <div class="section">
-<div class="section">
 
 <h2>💰 Federal Spending Intelligence</h2>
 
@@ -384,7 +393,6 @@ See how your representatives actually vote.
 
 </table>
 
-</div>
 <h2>Transparency Roadmap</h2>
 
 <p>
@@ -392,6 +400,34 @@ Coming Soon: Federal Spending Tracker • Executive Action Monitor • Lobbying 
 </p>
 
 </div>
+
 </div>
+
+<script>
+
+function lookupZip(){
+
+let zip = document.getElementById("zipInput").value;
+let results = document.getElementById("results");
+
+if(zip === "83702"){
+results.innerHTML = `
+<h3>Your Representatives</h3>
+<p>Sen. Mike Crapo</p>
+<p>Sen. Jim Risch</p>
+<p>Rep. Russ Fulcher</p>
+`;
+}
+else{
+results.innerHTML = `
+<p>ZIP database expanding soon.</p>
+<p>AgoraSentinel will support nationwide lookup shortly.</p>
+`;
+}
+
+}
+
+</script>
+
 </body>
 </html>
